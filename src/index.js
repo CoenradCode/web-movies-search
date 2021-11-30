@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { StoreProvider, createStore, action, persist } from 'easy-peasy';
 
 //Create store
-const store = createStore({
-  //persist({
+const store = createStore(
+  persist({
   toggledCardView: true,
   LargeCardViewOn: false,
   LargeCardViewID: '',
@@ -28,7 +28,7 @@ const store = createStore({
   setLargeCardViewID: action((state, id) => {
     state.LargeCardViewID = id;
   }),
-});
+}));
 
 function Home() {
 

@@ -131,7 +131,12 @@ export default function LoadFavorites(props) {
                   <h3 className="list--title" onClick={() => setShowLargeCard(movie.imdbID)}>{movie.Title}</h3>
                   <p className="list--text mb-0"><small>{movie.Type}</small></p>
                   <p className=" list--text mb-2"><small>{movie.Year}</small></p>
-                <button className="button-toggle-list" onClick={() => setMovieToDelete(movie.Title,movie.Poster,movie.Type,movie.Year,movie.imdbID)}>D</button>
+                {/* <button className="button-toggle-list" onClick={() => setMovieToDelete(movie.Title,movie.Poster,movie.Type,movie.Year,movie.imdbID)}>D</button> */}
+
+                <button className="button-toggle-list" onClick={() => setMovieToDelete(movie.Title,movie.Poster,movie.Type,movie.Year,movie.imdbID)}>
+                <i><AiTwotoneDelete className="icon-bin" size="3em" alt="Card view"/></i>
+                </button>
+
                 </Col>
                 </div>
               </div>
